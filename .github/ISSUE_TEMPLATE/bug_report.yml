@@ -1,0 +1,85 @@
+name: Bug report
+description: Something does not work as expected
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please fill in the sections below. Do not include secrets, passwords or personal data.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is the problem, in one or two sentences?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Numbered steps, starting from a fresh demo campaign if possible.
+      placeholder: |
+        1. Open the GM view
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - web
+        - server
+        - mobile
+        - rules-engine
+        - dice
+        - maps
+        - combat
+        - sync (GM and player views)
+        - database
+        - accessibility
+        - docs
+        - ci
+    validations:
+      required: true
+  - type: dropdown
+    id: hidden-info
+    attributes:
+      label: Does the bug expose hidden information to the player view?
+      description: Hidden tokens, fog-covered zones, GM layer, hidden rolls or private notes appearing in the player view. If yes, this is a high priority bug.
+      options:
+        - "No"
+        - "Yes"
+        - "Not sure"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser and version, operating system, Android version and device, local or online demo, commit or version.
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Screenshots, recordings or logs
+      description: Drag and drop files here. Remove any secret first.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched the existing issues and this bug is not already reported.
+          required: true

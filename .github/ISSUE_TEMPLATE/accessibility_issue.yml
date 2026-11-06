@@ -1,0 +1,51 @@
+name: Accessibility issue
+description: A barrier for keyboard, screen reader, low vision, motor or cognitive accessibility
+title: "[A11y] "
+labels: ["accessibility", "bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The target is WCAG 2.2 level AA on the web and on the Android app.
+  - type: textarea
+    id: barrier
+    attributes:
+      label: What is the barrier?
+      description: Describe what a user cannot do or understand.
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Web
+        - Android app
+    validations:
+      required: true
+  - type: input
+    id: tech
+    attributes:
+      label: Assistive technology and tools
+      description: For example keyboard only, NVDA, VoiceOver, TalkBack, 200% zoom, largest system font size, axe, Lighthouse.
+  - type: input
+    id: criterion
+    attributes:
+      label: WCAG criterion, if known
+      placeholder: e.g. 2.1.1 Keyboard, 1.4.3 Contrast (Minimum), 2.5.8 Target Size (Minimum)
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Screenshots, recordings or audit output

@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question or discussion
+    url: <DISCORD_INVITE_URL_TODO>
+    about: For quick questions and discussions, use Discord. Decisions taken there must be written down in an issue or an ADR.

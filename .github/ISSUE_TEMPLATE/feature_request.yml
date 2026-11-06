@@ -1,0 +1,70 @@
+name: Feature request
+description: Propose a new feature or an improvement
+title: "[Feature] "
+labels: ["feature"]
+body:
+  - type: textarea
+    id: story
+    attributes:
+      label: User story
+      description: Who needs this, what do they want to do, and why?
+      placeholder: As a game master, I want ..., so that ...
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: A checklist that tells when the feature is done.
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: accessibility
+    attributes:
+      label: Accessibility considerations
+      description: Keyboard use, screen reader announcements, contrast, information not carried by color alone, reduced motion, touch target size on mobile.
+    validations:
+      required: true
+  - type: textarea
+    id: hidden-info
+    attributes:
+      label: Hidden information and permissions
+      description: What must stay hidden from the player view? Who is allowed to do this (GM, player)? Write "not applicable" if nothing is concerned.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - web
+        - server
+        - mobile
+        - rules-engine
+        - dice
+        - maps
+        - combat
+        - sync (GM and player views)
+        - database
+        - docs
+        - ci
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope in the project brief
+      options:
+        - Required
+        - Bonus
+        - Not in the brief
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional context
+      description: Links, mockups, related issues or ADRs.
