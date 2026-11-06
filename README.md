@@ -97,7 +97,8 @@ The stack is not final. Candidates under evaluation are documented in the [archi
 | Website | React (Vite) + Node.js (TypeScript) + WebSocket | Accepted ([ADR-0003](docs/technical/adr/0003-web-stack.md)) |
 | Mobile app | React Native (TypeScript), Android | Accepted ([ADR-0004](docs/technical/adr/0004-mobile-app.md)) |
 | Database | PostgreSQL, MySQL | TODO ([ADR-002](docs/technical/adr/)) |
-| CI/CD | GitHub Actions | Decided |
+| CI/CD | GitHub Actions | Decided ([ADR-0005](docs/technical/adr/0005-ci-cd-and-hosting.md)) |
+| Hosting (online demo) | Render free web service + Neon PostgreSQL | Proposed ([ADR-0005](docs/technical/adr/0005-ci-cd-and-hosting.md)) |
 | Project management | GitHub Projects | Decided |
 
 ## Getting started
@@ -114,8 +115,8 @@ The stack is not final. Candidates under evaluation are documented in the [archi
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/<ORG>/<REPO>.git
-cd <REPO>
+git clone https://github.com/EPIQuest-org/EPIQuest.git
+cd EPIQuest
 
 # 2. Configure the environment
 cp .env.example .env
@@ -225,7 +226,7 @@ The target is **WCAG 2.2 level AA** (in France, the RGAA) on the web and on the 
 
 The source code is released under the <LICENSE_TODO> license. See [LICENSE](LICENSE).
 
-### SRD 5.1 attribution
+### SRD attribution
 
 This work includes material taken from the System Reference Document 5.1 ("SRD 5.1") by Wizards of the Coast LLC and available at <https://dnd.wizards.com/resources/systems-reference-document>. The SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License available at <https://creativecommons.org/licenses/by/4.0/legalcode>.
 
@@ -233,4 +234,6 @@ This work includes material taken from the System Reference Document 5.1 ("SRD 5
 
 *(TODO: credit every image, icon, map and token that is not created by the team, with its source and license.)*
 
-> <PRODUCT_NAME> is not affiliated with, endorsed or sponsored by Wizards of the Coast. It is presented as "compatible with the 5th edition".
+> <PRODUCT_NAME> is 5th edition compatible.
+>
+> The full attribution notice, the indication of changes and the SRD version used are in [SRD-ATTRIBUTION.md](SRD-ATTRIBUTION.md).
